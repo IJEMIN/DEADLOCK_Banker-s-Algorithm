@@ -1,34 +1,34 @@
-·¹ÆÛ·±½º:
+ï»¿ë ˆí¼ëŸ°ìŠ¤:
 https://github.com/MaoAiz/Deadlocks
 
 
-Banker's AlogorithmÀ» ½Ã¹Ä·¹ÀÌ¼Ç ÇÏ´Â Å¬·¡½º
+Banker's Alogorithmì„ ì‹œë®¬ë ˆì´ì…˜ í•˜ëŠ” í´ëž˜ìŠ¤
 
 v1.0
 
-¸Å¼Òµå
-__init__: ÃÊ±âÈ­, ÃÑ ÀÚ¿øÀÇ ¾çÀ» °¡Áø ¸®½ºÆ®¸¦ ÀÔ·ÂÀ¸·Î ¹Þ´Â´Ù.
+ë§¤ì†Œë“œ
+__init__: ì´ˆê¸°í™”, ì´ ìžì›ì˜ ì–‘ì„ ê°€ì§„ ë¦¬ìŠ¤íŠ¸ë¥¼ ìž…ë ¥ìœ¼ë¡œ ë°›ëŠ”ë‹¤.
 
-SignProcesses: ÇÁ·Î¼¼½ºµéÀÌ ÇÊ¿ä·Î ÇÏ´Â ÃÑ ÀÚ¿øÀÇ ¾ç, ÇöÀç ÇÒ´çµÈ ÀÚ¿øÀÇ ¾ç¿¡ ´ëÇÑ Çà·ÄÀ» ¹Þ¾Æ Å¬·¡½º¸¦ ÃÊ±âÈ­ ÇÑ´Ù
+SignProcesses: í”„ë¡œì„¸ìŠ¤ë“¤ì´ í•„ìš”ë¡œ í•˜ëŠ” ì´ ìžì›ì˜ ì–‘, í˜„ìž¬ í• ë‹¹ëœ ìžì›ì˜ ì–‘ì— ëŒ€í•œ í–‰ë ¬ì„ ë°›ì•„ í´ëž˜ìŠ¤ë¥¼ ì´ˆê¸°í™” í•œë‹¤
 
-Difference: µÎ Çà·ÄÀÇ Â÷ÀÌ¸¦ ±¸ÇÏ´Â ¸Å¼Òµå. 
+Difference: ë‘ í–‰ë ¬ì˜ ì°¨ì´ë¥¼ êµ¬í•˜ëŠ” ë§¤ì†Œë“œ. 
 
-CalcNeed: Difference ¸Å¼Òµå¸¦ »ç¿ëÇÏ¿© ÇöÀç ´õ ÇÊ¿ä·Î ÇÏ´Â ÀÚ¿ø¿¡ ´ëÇÑ Need Çà·ÄÀ» °è»êÇÏ¿© ¹ÝÈ¯
+CalcNeed: Difference ë§¤ì†Œë“œë¥¼ ì‚¬ìš©í•˜ì—¬ í˜„ìž¬ ë” í•„ìš”ë¡œ í•˜ëŠ” ìžì›ì— ëŒ€í•œ Need í–‰ë ¬ì„ ê³„ì‚°í•˜ì—¬ ë°˜í™˜
 
-CalcAvaliable: ÇöÀç ÇÒ´çÇÏ°í ³²Àº ÀÚ¿øÀÇ ¾çÀ» °è»êÇÏ¿© ¹ÝÈ¯
+CalcAvaliable: í˜„ìž¬ í• ë‹¹í•˜ê³  ë‚¨ì€ ìžì›ì˜ ì–‘ì„ ê³„ì‚°í•˜ì—¬ ë°˜í™˜
 
-ExecuteProcess: ÀÎµ¦½º¸¦ ÀÔ·ÂÀ¸·Î ¹Þ¾Æ ÇØ´çÇÏ´Â ÇÁ·Î¼¼½º°¡ ¿ä±¸ÇÏ´Â ÀÚ¿øÀ» ÇÒ´ç. ¸¸¾à ÀÚ¿øÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸¸é False ¹ÝÈ¯
+ExecuteProcess: ì¸ë±ìŠ¤ë¥¼ ìž…ë ¥ìœ¼ë¡œ ë°›ì•„ í•´ë‹¹í•˜ëŠ” í”„ë¡œì„¸ìŠ¤ê°€ ìš”êµ¬í•˜ëŠ” ìžì›ì„ í• ë‹¹. ë§Œì•½ ìžì›ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ë©´ False ë°˜í™˜
 
-ReleasingProcess: ExecuteProcess ¼öÇàÈÄ ÇÁ·Î¼¼½º°¡ Á¾·áµÇ¾úÀ½À» ¸í½ÃÇÏ±â À§ÇØ ÇÁ·Î¼¼½ºÀÇ Finish »óÅÂ¸¦ True·Î ÇÑ´Ù.
-		  ÇØ´ç ÇÁ·Î¼¼½º°¡ °¡Áö°í ÀÖ´ø ¸ðµç ÀÚ¿øÀ» ¹ÝÈ¯ ÇÏ°í ÀÚ¿ø »óÅÂ¿¡ ´ëÇÑ Çà·Äµé °»½Å.
+ReleasingProcess: ExecuteProcess ìˆ˜í–‰í›„ í”„ë¡œì„¸ìŠ¤ê°€ ì¢…ë£Œë˜ì—ˆìŒì„ ëª…ì‹œí•˜ê¸° ìœ„í•´ í”„ë¡œì„¸ìŠ¤ì˜ Finish ìƒíƒœë¥¼ Trueë¡œ í•œë‹¤.
+		  í•´ë‹¹ í”„ë¡œì„¸ìŠ¤ê°€ ê°€ì§€ê³  ìžˆë˜ ëª¨ë“  ìžì›ì„ ë°˜í™˜ í•˜ê³  ìžì› ìƒíƒœì— ëŒ€í•œ í–‰ë ¬ë“¤ ê°±ì‹ .
 
-TempSafeCheckAfterRelease: Safe State Ã¼Å©.
-¹Ýµå½Ã ExecuteProcess¿Í ReleasingProcess°¡ ¸ðµÎ ¼öÇàµÈ ´ÙÀ½ ¼öÇà.
-Á÷ÀüÀÇ ÇÁ·Î¼¼½º°¡ ¼öÇàµÇ°í Á¾·áµÈ ÀÌÈÄ ´ÙÀ½¿¡ ¿¬¼ÓÀûÀ¸·Î ¼öÇà °¡´ÉÇÑ ÇÁ·Î¼¼½º°¡ ´Ü ÇÏ³ª¶óµµ ÀÖ´ÂÁö °Ë»çÇÑ´Ù.
-¸¸¾à ¸ðµç ÇÁ·Î¼¼½º°¡ ¼öÇà ºÒ°¡´ÉÀÌ¶ó¸é, ÇØ´ç ÇÁ·Î¼¼½º Á¶ÇÕÀº unSafeÇÑ Á¶ÇÕÀ¸·Î¼­ DeadlockÀ» ÇÇÇÒ ¼ö ¾ø´Â Á¶ÇÕÀÌ´Ù.
+TempSafeCheckAfterRelease: Safe State ì²´í¬.
+ë°˜ë“œì‹œ ExecuteProcessì™€ ReleasingProcessê°€ ëª¨ë‘ ìˆ˜í–‰ëœ ë‹¤ìŒ ìˆ˜í–‰.
+ì§ì „ì˜ í”„ë¡œì„¸ìŠ¤ê°€ ìˆ˜í–‰ë˜ê³  ì¢…ë£Œëœ ì´í›„ ë‹¤ìŒì— ì—°ì†ì ìœ¼ë¡œ ìˆ˜í–‰ ê°€ëŠ¥í•œ í”„ë¡œì„¸ìŠ¤ê°€ ë‹¨ í•˜ë‚˜ë¼ë„ ìžˆëŠ”ì§€ ê²€ì‚¬í•œë‹¤.
+ë§Œì•½ ëª¨ë“  í”„ë¡œì„¸ìŠ¤ê°€ ìˆ˜í–‰ ë¶ˆê°€ëŠ¥ì´ë¼ë©´, í•´ë‹¹ í”„ë¡œì„¸ìŠ¤ ì¡°í•©ì€ unSafeí•œ ì¡°í•©ìœ¼ë¡œì„œ Deadlockì„ í”¼í•  ìˆ˜ ì—†ëŠ” ì¡°í•©ì´ë‹¤.
 
-print_matrixes: Çà·Äµé »óÅÂ Ãâ·Â
+print_matrixes: í–‰ë ¬ë“¤ ìƒíƒœ ì¶œë ¥
 
-Execute: ÀüÃ¼ ÇÁ·Î¼¼½º ¼öÇàÀ» ½ÃÀÛÇÑ´Ù.
-ÇÁ·Î¼¼½º¸¦ ¼øÂ÷ÀûÀ¸·Î ¼öÇàÇÏ°í, ´çÀå ¼öÇà ºÒ°¡´ÉÇÑ ÇÁ·Î¼¼½º´Â HOLD »óÅÂ·Î µÐ ´ÙÀ½, ´ÙÀ½ ·çÇÁ¶§ ´Ù½Ã ¼öÇàÀ» ½ÃµµÇÑ´Ù.
-¸¸¾à TempSafeCheckAfterRelease¿¡ ÀÇÇÑ SafeCheck¿¡¼­ ÇØ´ç ½ÃÄö½º°¡ ¼öÇà ºÒ°¡´ÉÀÌ¶ó ÆÇº°µÉ °æ¿ì °­Á¦ Á¾·áÇÑ´Ù.
+Execute: ì „ì²´ í”„ë¡œì„¸ìŠ¤ ìˆ˜í–‰ì„ ì‹œìž‘í•œë‹¤.
+í”„ë¡œì„¸ìŠ¤ë¥¼ ìˆœì°¨ì ìœ¼ë¡œ ìˆ˜í–‰í•˜ê³ , ë‹¹ìž¥ ìˆ˜í–‰ ë¶ˆê°€ëŠ¥í•œ í”„ë¡œì„¸ìŠ¤ëŠ” HOLD ìƒíƒœë¡œ ë‘” ë‹¤ìŒ, ë‹¤ìŒ ë£¨í”„ë•Œ ë‹¤ì‹œ ìˆ˜í–‰ì„ ì‹œë„í•œë‹¤.
+ë§Œì•½ TempSafeCheckAfterReleaseì— ì˜í•œ SafeCheckì—ì„œ í•´ë‹¹ ì‹œí€€ìŠ¤ê°€ ìˆ˜í–‰ ë¶ˆê°€ëŠ¥ì´ë¼ íŒë³„ë  ê²½ìš° ê°•ì œ ì¢…ë£Œí•œë‹¤.
